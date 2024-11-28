@@ -1,31 +1,54 @@
 "use strict";
-const landen = tikLanden();
-if (landen.length !== 0) {
-    const gemiddelde = berekenGemiddelde(landen);
-    console.log("Gemiddelde:", gemiddelde);
-    toonLandenOnderGemiddelde(landen, gemiddelde);
-    toonLandenBovenGemiddelde(landen, gemiddelde);
+
+// Variabelen
+let artikelnaam = prompt("Geef artikelnaam");
+let aankoopprijs = 0;
+let verkoopprijs = 0;
+let arr_artikels = [];
+
+// Ingave Artikels
+while (artikelnaam !== "stop") {
+
+    aankoopprijs = Number(prompt("Geef aankoopprijs"));
+    verkoopprijs = Number(prompt("Geef verkoopprijs"));
+
+    arr_artikels.push({ naam: artikelnaam, aankoop: aankoopprijs, verkoop: verkoopprijs });
+
+    artikelnaam = prompt("Geef artikelnaam");
 }
-function tikLanden() {
-    const landen = [];
-    let naam = prompt("Naam");
-    while (naam !== "stop") {
-        landen.push({ naam: naam, oppervlakte: Number(prompt("Oppervlakte")) });
-        naam = prompt("Naam");
-    }
-    return landen;
+
+// Zoekwoord
+let zoekwoord = prompt("Geef zoekwoord");
+
+
+// Oproepen functies
+toon_alle_artikels(arr_artikels);
+toon_woord_artikels(arr_artikels, zoekwoord);
+
+
+// Toon Alle Artikels
+function toon_alle_artikels(artikels) {
+
+    return artikels.forEach(artikel => console.log(artikel.naam + artikel.aankoop + artikel.verkoop));
+};
+
+// Toon Woord Artikels
+function toon_woord_artikels(artikels, woord) {
+
+    return toon_alle_artikels(artikels.filter(artikel => artikel.naam.indexOf(woord) !== -1));
 }
-function berekenGemiddelde(landen) {
-    return landen.map(land => land.oppervlakte)
-        .reduce((totaal, oppervlakte) => totaal + oppervlakte) / landen.length;
+
+
+// Toon Vergelijk prijs Artikels
+function toon_woord_artikels(artikels, woord) {
+
+    return toon_alle_artikels(artikels.filter(artikel => artikel.naam.indexOf(woord) !== -1));
 }
-function toonLandenOnderGemiddelde(landen, gemiddelde) {
-    console.log("Onder gemiddelde:");
-    landen.filter(land => land.oppervlakte < gemiddelde)
-        .forEach(land => console.log(land.naam, land.oppervlakte));
-}
-function toonLandenBovenGemiddelde(landen, gemiddelde) {
-    console.log("Boven gemiddelde:");
-    landen.filter(land => land.oppervlakte > gemiddelde)
-        .forEach(land => console.log(land.naam, land.oppervlakte));
-} 
+
+
+
+
+
+
+
+
