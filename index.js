@@ -4,6 +4,7 @@ let arr_land_oppervlakte = [];
 let land = prompt("land_");
 
 
+// Check Stop
 while (land !== "stop") {
 
     let oppervlakte = Number(prompt("oppervlakte"));
