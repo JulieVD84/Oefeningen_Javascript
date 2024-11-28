@@ -69,8 +69,12 @@ function toon_grenswaarde_verkoopprijs_artikels(artikels, verkoopprijs_ondergren
 // Toon Gemiddelde Artikels
 function toon_gemiddelde_verkoopprijs_artikels(artikels) {
 
-    let som_artikels = artikels.reduce((artikel, artikel2) => artikel + artikel2.verkoop, 0);
-    return (som_artikels / artikels.length);
+    // Eerste mogelijkheid
+    return artikels.reduce((artikel, artikel2) => artikel + artikel2.verkoop, 0) / artikels.length;
+
+    // Tweede mogelijkheid
+    //let som_artikels = artikels.reduce((artikel, artikel2) => artikel + artikel2.verkoop, 0);
+    //return (som_artikels / artikels.length);
 }
 
 
