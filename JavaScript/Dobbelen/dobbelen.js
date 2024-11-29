@@ -24,7 +24,7 @@ document.getElementById("button_werp").onclick = function () {
 
     // Toon dobbelsteen
     function Toon_Dobbelsteen(dobbel_id, resultaat) {
-        document.getElementById(dobbel_id).src = 'steen' + resultaat + ".svg"
+        document.getElementById(dobbel_id).src = 'steen' + resultaat + ".svg";
     }
 
 }
