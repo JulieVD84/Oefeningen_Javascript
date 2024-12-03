@@ -7,6 +7,3 @@ document.getElementById("zonderOfMetAfbeeldingen").onclick = () => {
 
     this.innerText = this.innerText === "Zonder afbeeldingen" ? "Met afbeeldingen" : "Zonder afbeeldingen";
 }
-
-
-document.querySelectorAll
