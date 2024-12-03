@@ -1,5 +1,4 @@
-document.getElementById("zonderOfMetAfbeeldingen").onclick = function () {
-
+document.getElementById("zonderOfMetAfbeeldingen").onclick = () => {
 
     for (const afbeelding of document.querySelectorAll("#standbeelden img")) {
 
@@ -8,3 +7,6 @@ document.getElementById("zonderOfMetAfbeeldingen").onclick = function () {
 
     this.innerText = this.innerText === "Zonder afbeeldingen" ? "Met afbeeldingen" : "Zonder afbeeldingen";
 }
+
+
+document.querySelectorAll
