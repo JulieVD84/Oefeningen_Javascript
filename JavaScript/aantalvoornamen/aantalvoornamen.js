@@ -20,10 +20,10 @@ document.getElementById("buttonToevoegen").onclick = function () {
             // Replace row
             if (inputVoornaam === data.voornaam) {
 
-                tabelNamen.deleteRow(rijIndex);
                 data.aantal++;
 
-                insertRow(rijIndex, data)
+                tabelNamen.deleteRow(rijIndex);
+                invoegenRij(rijIndex, data)
 
                 nieuweRijToevoegen = false;
                 break;
@@ -35,12 +35,12 @@ document.getElementById("buttonToevoegen").onclick = function () {
         if (nieuweRijToevoegen) {
 
             arrayData.push({ voornaam: inputVoornaam, aantal: 0 });
-            insertRow(arrayData.length - 1, arrayData[arrayData.length - 1])
+            invoegenRij(arrayData.length - 1, arrayData[arrayData.length - 1])
         }
     }
 
-    // InsertRow
-    function insertRow(rij, data) {
+    // Invoegen Rij
+    function invoegenRij(rij, data) {
 
         const insertRow = tabelNamen.insertRow(rij);
         const insertCell = insertRow.insertCell();
