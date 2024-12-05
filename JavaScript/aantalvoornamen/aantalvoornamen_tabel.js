@@ -20,8 +20,10 @@ document.getElementById("buttonToevoegen").onclick = function () {
             // Replace row
             if (inputVoornaam === data.voornaam) {
 
+                // Verhoog Data
                 data.aantal++;
 
+                // Voorbeeld Met Tabel
                 tabelNamen.deleteRow(rijIndex);
                 invoegenRij(rijIndex, data)
 
@@ -34,12 +36,17 @@ document.getElementById("buttonToevoegen").onclick = function () {
         // Nieuw Object Toevoegen + Laatste Rij Toevoegn
         if (nieuweRijToevoegen) {
 
+            // Nieuwe Data Toevogen
             arrayData.push({ voornaam: inputVoornaam, aantal: 0 });
+
+            // Voorbeeld Met Tabel
             invoegenRij(arrayData.length - 1, arrayData[arrayData.length - 1])
+
         }
     }
 
-    // Invoegen Rij
+
+    // TABEL : Invoegen Rij
     function invoegenRij(rij, data) {
 
         const insertRow = tabelNamen.insertRow(rij);

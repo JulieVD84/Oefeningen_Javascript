@@ -26,6 +26,10 @@ document.getElementById("toevoegen").onclick = function () {
     verwijderHyperlink.onclick = function () {
         const tr = this.parentElement.parentElement;
         tr.remove();
+
+        // Alternatief
+        // tr.remove();
+        // tr.insertCell().append(verwijderHyperlink);
     };
 };
 

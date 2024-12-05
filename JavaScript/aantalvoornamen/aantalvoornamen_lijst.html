@@ -1,23 +1,15 @@
 <!doctype html>
 <html lang="nl">
 <head>
-    <script src="aantalvoornamen.js" defer></script>
-    <title>Aantal voornamen</title>
+    <script src="aantalvoornamen_lijst.js" defer></script>
+    <title>Aantal Voornamen Lijst</title>
     <link rel="icon" href="javascript.ico" type="image/x-icon">
     <link rel="stylesheet" href="aantalvoornamen.css">
 </head>
 <body>
     <label for="inputVoornaam"></label> Voornaam: <input type="text" name="" id="inputVoornaam" class="inline">
     <button id="buttonToevoegen" class="feedback inline">Toevoegen</button>
-    <table>
-        <thead>
-            <tr>
-                <th>Voornaam</th>
-                <th>Familienaam</th>
-            </tr>
-        </thead>
-        <tbody id="bodyTabel">
-        </tbody>
-    </table>
+    <ul id="lijst">
+    </ul>
 </body>
 </html>
