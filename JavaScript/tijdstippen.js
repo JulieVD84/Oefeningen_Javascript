@@ -15,4 +15,12 @@ if (bezoeken === null) {
     }
 }
 bezoeken.push(new Date().toLocaleTimeString("nl-BE"));
-localStorage.setItem("bezoeken", JSON.stringify(bezoeken)); 
+localStorage.setItem("bezoeken", JSON.stringify(bezoeken));
+console.log(JSON.stringify(bezoeken));
+
+const ul = document.getElementById("bezoeken");
+for (const bezoek of bezoeken) {
+    const li = document.createElement("li");
+    li.innerText = bezoek;
+    ul.appendChild(li);
+} 
