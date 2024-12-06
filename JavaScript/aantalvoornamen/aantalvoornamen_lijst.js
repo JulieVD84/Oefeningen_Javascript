@@ -5,7 +5,6 @@ const arrayData = [];
 document.getElementById("buttonToevoegen").onclick = function () {
 
     // Tabel / Input
-    const tabelNamen = document.querySelector("#bodyTabel");
     const inputVoornaam = document.getElementById("inputVoornaam").value;
 
     let nieuweRijToevoegen = true;

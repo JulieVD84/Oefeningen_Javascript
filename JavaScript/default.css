@@ -112,3 +112,9 @@ dd {
 button {
     display: block;
 }
+
+
+.span {
+    color: red;
+    font-weight: bold;
+}
